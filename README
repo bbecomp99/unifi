@@ -1,0 +1,15 @@
+  _______________ ___  _________  .___                 __         .__  .__   
+  \_   _____/    |   \/   _____/  |   | ____   _______/  |______  |  | |  |  
+   |    __)_|    |   /\_____  \   |   |/    \ /  ___/\   __\__  \ |  | |  |  
+   |        \    |  / /        \  |   |   |  \\___ \  |  |  / __ \|  |_|  |__
+  /_______  /______/ /_______  /  |___|___|  /____  > |__| (____  /____/____/
+          \/                 \/            \/     \/            \/           
+
+    Easy UniFi Video Install Script!
+
+FROM: https://glennr.nl/s/unifi-network-controller     
+
+
+apt-get install wget ca-certificates -y
+
+sudo bash ./installcam.sh
