@@ -1,0 +1,25 @@
+1, Download "jre-8u271-linux-x64.tar.gz" from [SEE ABOVE]
+
+(Or if the above link is no worky, then https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html (you want the JRE! not the JDK, so scroll down a bit on the page for the "Java SE Runtime Environment 8u271" section))
+
+as root (sudo su):
+
+2, mkdir /usr/local/java (if not already exists)
+
+3, cp "jre-8u271-linux-x64.tar.gz" /usr/local/java
+
+4, cd /usr/local/java
+
+5, tar zxvf jre-8u271-linux-x64.tar.gz
+
+6, rm jre-8u271-linux-x64.tar.gz
+
+7, update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jre1.8.0_271/bin/java" 1
+
+8, update-alternatives --config java (select the number of the newly extracted one, it was #3 for me):
+
+* 3      /usr/local/java/jre1.8.0_271/bin/java      1     manual mode
+
+9, echo "JAVA_HOME=/usr/local/java/jre1.8.0_271" | tee -a /etc/default/unifi
+
+10, reboot and enjoy.
